@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ClientRow from '@/components/ClientRow.vue';
+import Footer from '@/components/Footer.vue';
 import Navbar from '@/components/Navbar.vue';
 import WhiteSection from '@/components/WhiteSection.vue';
 </script>
@@ -48,7 +49,7 @@ import WhiteSection from '@/components/WhiteSection.vue';
                 Clients
             </p>
             
-            <div class="flex border-2 border-[#FFFFFF40] w-full max-w-4xl rounded-sm">
+            <div class="flex border-2 border-[#FFFFFF40] w-full max-w-2xl rounded-sm">
                 <div class="flex flex-col items-center justify-center w-1/2 py-10 border-r border-[#FFFFFF40]">
                     <p class="text-[#FFFFFF] font-semibold text-[64px] leading-none font-[Montserrat,sans-serif]">120+</p>
                     <p class="text-[#FFFFFF] text-[28px] opacity-80 mt-4 font-[Montserrat,sans-serif] font-regular">Companies</p>
@@ -68,6 +69,7 @@ import WhiteSection from '@/components/WhiteSection.vue';
             <WhiteSection/>
         </div>
 
+        <Footer/>
        
     </section>
 </template>

@@ -34,10 +34,10 @@
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-        {{-- Google Fonts: Montserrat --}}
+        {{-- Google Fonts: Montserrat & Source Sans Pro --}}
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 
         {{-- Preload logo to prevent flash on page load --}}
         <link rel="preload" href="/img/logo-white.png" as="image" fetchpriority="high">

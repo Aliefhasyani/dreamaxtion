@@ -8,7 +8,7 @@ export default defineComponent({
 
 <template>
   <div>
-    <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 items-start">
+    <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 items-start">
       
       <div class="group transition-all duration-300 hover:-translate-y-2 border border-neutral-200">
         <div class="overflow-hidden aspect-[3/4]">
