@@ -1,24 +1,49 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import ClientRow from '@/components/ClientRow.vue';
 import Footer from '@/components/Footer.vue';
 import Navbar from '@/components/Navbar.vue';
 import WhiteSection from '@/components/WhiteSection.vue';
+
+const activeTab = ref('about');
 </script>
 
 <template>
     <section class="bg-[#020F1B] min-h-screen relative overflow-hidden">
-    
-
-
+        
         <div class="absolute top-0 left-0 w-full z-30">
             <Navbar/>
         </div>
 
         <div class="relative z-10">
             <div class="flex justify-center items-center gap-16 mt-36 relative z-20">
-                <p class="w-52 font-normal text-center bg-[#DFE3E817] hover:bg-gray-500/60 text-white py-1 rounded-full transition-all duration-200 cursor-pointer font-[Montserrat,sans-serif]">About Dreamaxtion</p>
-                <p class="w-52 font-normal text-center  hover:bg-gray-500/60 text-white py-1 rounded-full transition-all duration-200 cursor-pointer font-[Montserrat,sans-serif]">Vision & Mission</p>
-                <p class="w-52 font-normal text-center  hover:bg-gray-500/60 text-white py-1 rounded-full transition-all duration-200 cursor-pointer font-[Montserrat,sans-serif]">Values</p>
+                <p 
+                    @click="activeTab = 'about'"
+                    :class="[
+                        'w-52 font-normal text-center hover:bg-gray-500/60 text-white py-1 rounded-full transition-all duration-200 cursor-pointer font-[Montserrat,sans-serif]',
+                        activeTab === 'about' ? 'bg-[#DFE3E817]' : ''
+                    ]"
+                >
+                    About Dreamaxtion
+                </p>
+                <p 
+                    @click="activeTab = 'vision'"
+                    :class="[
+                        'w-52 font-normal text-center hover:bg-gray-500/60 text-white py-1 rounded-full transition-all duration-200 cursor-pointer font-[Montserrat,sans-serif]',
+                        activeTab === 'vision' ? 'bg-[#DFE3E817]' : ''
+                    ]"
+                >
+                    Vision & Mission
+                </p>
+                <p 
+                    @click="activeTab = 'values'"
+                    :class="[
+                        'w-52 font-normal text-center hover:bg-gray-500/60 text-white py-1 rounded-full transition-all duration-200 cursor-pointer font-[Montserrat,sans-serif]',
+                        activeTab === 'values' ? 'bg-[#DFE3E817]' : ''
+                    ]"
+                >
+                    Values
+                </p>
             </div>
             
             <div class="flex items-start pr-12 w-full relative">
@@ -33,13 +58,32 @@ import WhiteSection from '@/components/WhiteSection.vue';
                 </div>
 
                 <div class="flex flex-col ml-24 pt-48 max-w-2xl">
-                    <p class="font-semibold font-[Montserrat,sans-serif] text-[18px] text-white tracking-[5%]">Est 2017</p>
-                    <p class="font-normal text-[14px] font-[Montserrat,sans-serif] text-white mt-8 leading-relaxed">
-                        Dreamaxtion is making Human Capital better for employers and talents alike, leveraging psychometrics and cloud technology to revolutionize assessment, recruitment, and talent development.
-                    </p>
-                    <p class="font-normal text-[14px] font-[Montserrat,sans-serif] text-white mt-8 leading-relaxed">
-                        Our flagship product is Dreamtalent, a predictive psychometric testing platform. With an assessment library in personality, culture and strengths, we help employers put the right people in the right place, and talents to reach their full potential.
-                    </p>
+                    
+                    <div v-if="activeTab === 'about'">
+                        <p class="font-semibold font-[Montserrat,sans-serif] text-[18px] text-white tracking-[5%]">Est 2017</p>
+                        <p class="font-normal text-[14px] font-[Montserrat,sans-serif] text-white mt-8 leading-relaxed">
+                            Dreamaxtion is making Human Capital better for employers and talents alike, leveraging psychometrics and cloud technology to revolutionize assessment, recruitment, and talent development.
+                        </p>
+                        <p class="font-normal text-[14px] font-[Montserrat,sans-serif] text-white mt-8 leading-relaxed">
+                            Our flagship product is Dreamtalent, a predictive psychometric testing platform. With an assessment library in personality, culture and strengths, we help employers put the right people in the right place, and talents to reach their full potential.
+                        </p>
+                    </div>
+
+                    <div v-if="activeTab === 'vision'">
+                        <p class="font-semibold font-[Montserrat,sans-serif] text-[18px] text-white tracking-[5%]">Our Vision & Mission</p>
+                        <p class="font-normal text-[14px] font-[Montserrat,sans-serif] text-white mt-8 leading-relaxed">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore fugiat est non ipsum, dicta id blanditiis accusamus mollitia ex expedita totam consectetur optio? Molestias nemo mollitia qui laudantium corrupti ullam?
+                        </p>
+                        <p class="font-normal text-[14px] font-[Montserrat,sans-serif] text-white mt-8 leading-relaxed">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis odio nisi assumenda molestias adipisci ab, perspiciatis neque veritatis. Quos possimus esse animi voluptates. Inventore laborum optio incidunt provident quam consequuntur!                        </p>
+                    </div>
+
+                    <div v-if="activeTab === 'values'">
+                        <p class="font-semibold font-[Montserrat,sans-serif] text-[18px] text-white tracking-[5%]">Our Values</p>
+                        <p class="font-normal text-[14px] font-[Montserrat,sans-serif] text-white mt-8 leading-relaxed">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ratione beatae sunt optio nulla dicta quisquam porro voluptatem aliquid, voluptate laborum sapiente sint maiores architecto excepturi soluta quo laudantium enim?                        </p>
+                    </div>
+
                 </div>
             </div>
         </div>
