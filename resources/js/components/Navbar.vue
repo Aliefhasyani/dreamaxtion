@@ -31,16 +31,16 @@ const toggleMobileMenu = () => {
                         <Link href="/about" class="text-white text-[16px] tracking-wider font-semibold font-[Montserrat,sans-serif] mr-10">
                             About 
                         </Link>
-                        <Link href="/services" class="text-white text-[16px] tracking-wider font-semibold font-[Montserrat,sans-serif] mr-10">
+                        <Link href="/about" class="text-white text-[16px] tracking-wider font-semibold font-[Montserrat,sans-serif] mr-10">
                             Services
                         </Link>
-                        <Link href="/journey" class="text-white text-[16px] tracking-wider font-semibold font-[Montserrat,sans-serif] mr-10">
+                        <Link href="/about" class="text-white text-[16px] tracking-wider font-semibold font-[Montserrat,sans-serif] mr-10">
                             Journey
                         </Link>
-                        <Link href="/founder" class="text-white text-[16px] tracking-wider font-semibold font-[Montserrat,sans-serif] mr-10">
+                        <Link href="/about" class="text-white text-[16px] tracking-wider font-semibold font-[Montserrat,sans-serif] mr-10">
                             Founder
                         </Link>
-                        <Link href="/book-meeting" class="bg-[#DF3E43] text-[16px]  hover:opacity-90 text-white font-semibold font-[Montserrat,sans-serif] py-2 px-11 rounded-full transition-opacity duration-200 inline-block">
+                        <Link href="/about" class="bg-[#DF3E43] text-[16px]  hover:opacity-90 text-white font-semibold font-[Montserrat,sans-serif] py-2 px-11 rounded-full transition-opacity duration-200 inline-block">
                             Book Meeting
                         </Link>
                     </div>
